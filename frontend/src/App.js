@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LandingPage from '/home/user/GDG_CampusProject/frontend/src/components/LandingPage';
 
 // Placeholder Components (will be replaced with actual components later)
-const LandingPage = () => <div>Landing Page</div>;
-const AuthPages = () => <div>Auth Pages</div>;
+const AuthPages = () => <div>Auth Pages</div>; // Keep for now, replace later
 const StudentDashboard = () => <div>Student Dashboard</div>;
 
 function App() {

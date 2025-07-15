@@ -3,6 +3,7 @@ import './LandingPage.css'; // We'll create this CSS file next
 
 function LandingPage() {
   return (
+
     <div className="landing-page">
       <section className="hero-section">
         <h1>From Zero to Internships — Let AI be your guide</h1>
@@ -25,6 +26,15 @@ function LandingPage() {
             <h3>Apply</h3>
             <p>Get matched with real internships based on your profile.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="testimonials-section">
+        <h2>What Students Say</h2>
+        {/* Placeholder for testimonials */}
+        <div className="testimonial-card">
+          <p>"ZME helped me land my first internship!"</p>
+          <p>- Happy Student</p>
         </div>
       </section>
 
