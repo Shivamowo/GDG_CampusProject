@@ -1,10 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LandingPage from '/home/user/GDG_CampusProject/frontend/src/components/LandingPage';
-
-// Placeholder Components (will be replaced with actual components later)
-const AuthPages = () => <div>Auth Pages</div>; // Keep for now, replace later
-const StudentDashboard = () => <div>Student Dashboard</div>;
+import LandingPage from './pages/LandingPage';
+import AuthPages from './pages/AuthPages';
+import StudentDashboard from './pages/StudentDashboard';
 
 function App() {
   return (
@@ -20,6 +18,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;
