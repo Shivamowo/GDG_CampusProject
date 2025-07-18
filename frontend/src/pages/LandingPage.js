@@ -1,7 +1,18 @@
 import React from 'react';
 import './LandingPage.css';
+import { GoogleLogin } from '@react-oauth/google';
 
 function LandingPage() {
+  const handleGoogleSuccess = (credentialResponse) => {
+    // You get credentialResponse.credential (JWT)
+    // Send it to your backend for verification or use it for login
+    console.log('Google sign up success:', credentialResponse);
+  };
+
+  const handleGoogleError = () => {
+    console.log('Google sign up failed');
+  };
+
   return (
     <div className="hero-container">
       <div className="hero-card">
@@ -11,7 +22,14 @@ function LandingPage() {
           Start your path to success in a space designed for you.
         </p>
         <div className="hero-actions">
-          <button className="btn google">Sign up with Google</button>
+          <GoogleLogin
+            onSuccess={handleGoogleSuccess}
+            onError={handleGoogleError}
+            text="signup_with"
+            shape="rectangular"
+            theme="outline"
+            size="large"
+          />
           <button className="btn primary">Sign up for free</button>
         </div>
         <img
