@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './LandingPage.css';
 import { GoogleLogin } from '@react-oauth/google';
+import { UserContext } from '../UserContext';
+import { useNavigate } from 'react-router-dom';
 
 function LandingPage() {
+  const { profile, setProfile } = useContext(UserContext);
+  const navigate = useNavigate();
+
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
       const res = await fetch('http://localhost:4000/api/auth/google', {
@@ -12,8 +17,8 @@ function LandingPage() {
       });
       const data = await res.json();
       if (data.user) {
-        console.log('Profile created:', data.user);
-        // Optionally, save user info to state or redirect
+        setProfile(data.user);
+        navigate('/profile'); // Redirect to personalized page
       } else {
         console.error('Profile creation failed:', data.error);
       }
@@ -26,6 +31,19 @@ function LandingPage() {
     console.log('Google sign up failed');
   };
 
+  // If signed in, show personalized welcome
+  if (profile) {
+    return (
+      <div className="personalized-app">
+        <h2>Welcome, {profile.name}!</h2>
+        <img src={profile.picture} alt="Profile" style={{ width: 80, borderRadius: '50%' }} />
+        <p>Email: {profile.email}</p>
+        {/* Add your personalized dashboard, navigation, etc. here */}
+      </div>
+    );
+  }
+
+  // Otherwise, show landing page
   return (
     <div className="hero-container">
       <div className="hero-card">
