@@ -1,395 +1,73 @@
-/* Add your LandingPage styles here */
-
-.landing-page {
-  padding: 2rem;
-  text-align: center;
-  background: linear-gradient(135deg, #4f8cff 0%, #a259ff 100%);
-  color: #fff;
-}
-
-.hero h1 {
-  font-family: 'Poppins', 'Inter', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.cta-buttons .primary {
-  background: #4f8cff;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
-  margin-right: 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.cta-buttons .secondary {
-  background: #fff;
-  color: #4f8cff;
-  border: 2px solid #4f8cff;
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.step-cards {
+/* Add to main.css or create LandingPage.css and import it */
+.hero-container {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
+  align-items: center;
+  min-height: 80vh;
+  background: #f5f7fa;
 }
 
-.card {
+.hero-card {
   background: #fff;
-  color: #4f8cff;
-  padding: 1rem 2rem;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(33, 150, 243, 0.08);
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+}
+
+.hero-card h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1976d2;
+}
+
+.hero-card p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn.primary {
+  background: #1976d2;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn.google {
+  background: #fff;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+  font-weight: 600;
+}
+
+.btn.primary:hover, .btn.google:hover {
+  background: #2196f3;
+  color: #fff;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 320px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(79,140,255,0.1);
-  font-weight: bold;
-}
-
-.testimonials {
-  margin-top: 2rem;
-}
-
-.testimonial {
-  background: #fff;
-  color: #a259ff;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(162,89,255,0.1);
-}
-
-/* Butter-style landing page */
-.landing-page.butter-style {
-  min-height: 100vh;
-  background: #fff700;
-  font-family: 'Poppins', 'Inter', sans-serif;
-  color: #181818;
-}
-.butter-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 3rem 1rem 3rem;
-  background: transparent;
-}
-.butter-header .logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
-.butter-header nav {
-  display: flex;
-  gap: 2rem;
-}
-.butter-header nav a {
-  color: #181818;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-}
-.header-actions {
-  display: flex;
-  gap: 1rem;
-}
-.header-actions .link {
-  background: none;
-  border: none;
-  color: #181818;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.header-actions .primary {
-  background: #181818;
-  color: #fff700;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.butter-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 2rem 2rem 2rem;
-  text-align: center;
-}
-.butter-hero h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  line-height: 1.1;
-}
-.butter-hero .subtitle {
-  font-size: 1.2rem;
-  color: #181818;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-}
-.cta-row {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-  justify-content: center;
-}
-.cta-row .google-signin {
-  background: #181818;
-  color: #fff700;
-  border: none;
-  border-radius: 8px;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-.cta-row .secondary {
-  background: #fff;
-  color: #181818;
-  border: 2px solid #181818;
-  border-radius: 8px;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-.hero-image {
-  margin-top: 2.5rem;
-  display: flex;
-  justify-content: center;
-}
-.mockup-video {
-  background: #fff;
-  border-radius: 2rem;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
-  padding: 2rem 3rem;
-  font-size: 1.5rem;
-  color: #181818;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.mockup-video .play-btn {
-  background: #fff700;
-  color: #181818;
-  border-radius: 50%;
-  font-size: 2rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  margin-right: 0.5rem;
-}
-@media (max-width: 700px) {
-  .butter-header {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  .butter-hero h1 {
-    font-size: 2rem;
-  }
-  .mockup-video {
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-  }
-}
-
-/* Butter-style landing page with softer, friendlier look */
-.landing-page.butter-style.soft {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #fffbe7 0%, #f7f7ff 100%);
-  font-family: 'Poppins', 'Inter', sans-serif;
-  color: #23213a;
-  transition: background 0.5s;
-}
-.butter-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 3rem 1rem 3rem;
-  background: transparent;
-}
-.butter-header .logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  color: #6c63ff;
-}
-.butter-header nav {
-  display: flex;
-  gap: 2rem;
-}
-.butter-header nav a {
-  color: #23213a;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  border-radius: 6px;
-  padding: 0.25rem 0.5rem;
-  transition: background 0.2s;
-}
-.butter-header nav a:hover {
-  background: #f3f0ff;
-}
-.header-actions {
-  display: flex;
-  gap: 1rem;
-}
-.header-actions .link {
-  background: none;
-  border: none;
-  color: #6c63ff;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 6px;
-  padding: 0.25rem 0.75rem;
-  transition: background 0.2s;
-}
-.header-actions .link:hover {
-  background: #f3f0ff;
-}
-.header-actions .primary {
-  background: #6c63ff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(108,99,255,0.08);
-  transition: background 0.2s;
-}
-.header-actions .primary:hover {
-  background: #5548c8;
-}
-.butter-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 2rem 2rem 2rem;
-  text-align: center;
-}
-.butter-hero h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 1.2rem;
-  line-height: 1.1;
-  color: #23213a;
-  letter-spacing: -1px;
-}
-.butter-hero .subtitle {
-  font-size: 1.15rem;
-  color: #4d4c5c;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-  font-weight: 400;
-}
-.cta-row {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-  justify-content: center;
-}
-.cta-row .google-signin {
-  background: #fff;
-  color: #23213a;
-  border: 2px solid #6c63ff;
-  border-radius: 8px;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(108,99,255,0.08);
-  transition: background 0.2s;
-}
-.cta-row .google-signin:hover {
-  background: #f3f0ff;
-}
-.cta-row .secondary {
-  background: #6c63ff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(108,99,255,0.08);
-  transition: background 0.2s;
-}
-.cta-row .secondary:hover {
-  background: #5548c8;
-}
-.hero-image {
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-.soft-img {
-  width: 340px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 32px rgba(108,99,255,0.10);
-  border: 3px solid #fff;
-  margin-bottom: 1rem;
-  background: #f3f0ff;
-}
-.mockup-video.soft-mockup {
-  background: #fff;
-  border-radius: 2rem;
-  box-shadow: 0 4px 32px rgba(108,99,255,0.10);
-  padding: 1.2rem 2rem;
-  font-size: 1.2rem;
-  color: #6c63ff;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-weight: 600;
-  border: 1.5px solid #f3f0ff;
-}
-.mockup-video .play-btn {
-  background: #fffbe7;
-  color: #6c63ff;
-  border-radius: 50%;
-  font-size: 2rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(108,99,255,0.08);
-  margin-right: 0.5rem;
-  border: 2px solid #fff;
-}
-@media (max-width: 700px) {
-  .butter-header {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  .butter-hero h1 {
-    font-size: 1.5rem;
-  }
-  .soft-img {
-    width: 95vw;
-    height: 120px;
-  }
-  .mockup-video {
-    padding: 0.7rem 1rem;
-    font-size: 1rem;
-  }
+  margin-top: 1rem;
+  box-shadow: 0 2px 12px rgba(33, 150, 243, 0.12);
 }
