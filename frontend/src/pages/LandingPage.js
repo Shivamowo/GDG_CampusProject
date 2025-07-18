@@ -3,10 +3,23 @@ import './LandingPage.css';
 import { GoogleLogin } from '@react-oauth/google';
 
 function LandingPage() {
-  const handleGoogleSuccess = (credentialResponse) => {
-    // You get credentialResponse.credential (JWT)
-    // Send it to your backend for verification or use it for login
-    console.log('Google sign up success:', credentialResponse);
+  const handleGoogleSuccess = async (credentialResponse) => {
+    try {
+      const res = await fetch('http://localhost:4000/api/auth/google', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ credential: credentialResponse.credential }),
+      });
+      const data = await res.json();
+      if (data.user) {
+        console.log('Profile created:', data.user);
+        // Optionally, save user info to state or redirect
+      } else {
+        console.error('Profile creation failed:', data.error);
+      }
+    } catch (err) {
+      console.error('Error connecting to backend:', err);
+    }
   };
 
   const handleGoogleError = () => {
